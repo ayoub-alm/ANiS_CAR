@@ -1,0 +1,251 @@
+a{
+  color: #559fee;
+}
+a:hover{
+  color: #559fee;
+}
+.section-title:before{
+  background-color: #559fee;
+}
+.section-sub:before{
+  background-color: #559fee;
+}
+.slicknav_menu .slicknav_icon-bar{
+  background: #559fee;
+}
+.slicknav_btn{
+  border-color: #559fee;
+}
+.slicknav_nav a:hover, .slicknav_nav .active{
+  color: #559fee;
+}
+.slicknav_nav .dropdown li a.active{
+  color: #559fee;
+}
+.top-bar{
+  background: #559fee;
+}
+.header-top-right .white-bg{
+  color: #559fee;
+}
+.navbar li.active a.nav-link{
+  color: #fff!important;
+  background: #559fee;
+}
+.navbar-expand-lg .navbar-nav li a:hover, .navbar-expand-lg .navbar-nav li .active>a, .navbar-expand-lg .navbar-nav li a:focus{
+  color: #559fee;
+}
+.navbar-light .navbar-nav .nav-link:focus, 
+.navbar-light .navbar-nav .nav-link:hover{
+  color: #559fee;
+}
+.dropdown .dropdown-item:focus, .dropdown .dropdown-item:hover, .dropdown .dropdown-item.active{
+  color: #559fee;
+}
+.dropdown-menu{
+  border-color: #559fee;
+}
+.btn-common{
+    background-color: #559fee;
+}
+.btn-common:hover{
+  color: #fff;
+}
+.btn-border:hover{
+  background-color: #559fee;
+}
+#main-slide .carousel-item .carousel-caption .heading span{
+  color: #559fee;
+}
+.item-body .pricin-list .property-price{
+  color: #559fee;
+}
+.item-body .property-title a:hover{
+  color: #559fee;
+}
+.team-item .info-text h3 a:hover{
+  color: #559fee;
+}
+.services-item .icon i{
+  color: #559fee;
+}
+.services-item .services-content h3 a:hover{
+  color: #559fee;
+}
+.featured .featured-item .icon i{
+  color: #559fee;
+}
+.featured .featured-item h3 a:hover{
+  color: #559fee;
+}
+.counter-section .counter .icon i{
+  color: #559fee;
+}
+#portfolio-section .portfolio-box .overlay-box a{
+  background: #559fee;
+}
+.img-box:hover:before{
+  background-color: #559fee;
+}
+.client-info .info-text h2 a:hover{
+  color: #559fee;
+}
+.blog-item .date{
+  background: #559fee;
+}
+.blog-item .descr h3 a:hover{
+  color: #559fee;
+}
+.blog-item .descr h3:before{
+  background-color: #559fee;
+}
+.product-filter .layout-switcher .active{
+  background-color: #559fee;
+}
+.property-details .others ul li a{
+  background: #559fee;
+}
+.widget-button:hover{
+  background: #559fee;
+}
+.property-features li i{
+  color: #559fee;
+}
+#listing-carousel .owl-controls .owl-buttons .owl-prev:hover{
+  background: #559fee;
+}
+.listing-badges .featured{
+  background-color: #559fee;
+}
+.listing-content .listing-content{
+  background: #559fee;
+}
+.about .img-thumb:hover:before{
+  background-color: #559fee; 
+}
+.pricing-table .table-header{
+  background: #559fee;
+}
+.pricing-table .plan-info p strong i{
+  color: #559fee;
+}
+.dashborad-box .item .icon span{
+  color: #559fee;
+}
+.user-profile-box .detail ul li .active,
+.user-profile-box .detail ul li a:hover{
+  color: #559fee;
+}
+.messages .message .body h6 .badge{
+  background: #559fee;
+}
+.messages .message .body .post-time{
+  color: #559fee;
+}
+.messages .message .body .controller ul li a:hover{
+  color: #559fee;
+}
+.review .body .controller ul li a:hover{
+  color: #559fee;
+}
+.review .body .post-time{
+  color: #559fee;
+}
+.password-section h6{
+  color: #559fee;
+}
+.my-properties table tbody tr td.actions .edit{
+  color: #559fee; 
+}
+.blog-post .content h2 a:hover{
+  color: #559fee;
+}
+.blog-post .post-meta li a:hover{
+  color: #559fee;
+}
+.sidebar .widget-text h5 a:hover{
+  color: #559fee;
+}
+.reply-link{
+  color: #559fee;
+}
+.contact-right-area .contact-right .contact-icon{
+  background: #559fee; 
+}
+.panel-default .panel-heading a{
+  background-color: #559fee;
+}
+.controls .active{
+  color: #559fee !important;
+  border-color: #559fee;
+}
+.form-control:focus{
+  border-color: #559fee;
+}
+a.back-to-top i{
+  background: #559fee;
+}
+#copyright p a:hover{
+  color: #559fee;
+}
+.settings{
+  color: #559fee;
+}
+.pagination .page-item .page-link{
+  color: #559fee;
+}
+.pagination .page-item .page-link:hover{
+  background: #559fee;
+}
+.pagination-container .pagination .page-item .page-link{
+  color: #559fee;
+}
+.pagination-container .pagination .page-item .page-link:hover{
+  background: #559fee;
+}
+.owl-theme .owl-controls .owl-page span{
+  border-color: #559fee;
+}
+.owl-theme .owl-controls .owl-page.active span, .owl-theme .owl-controls.clickable .owl-page:hover span{
+  background: #559fee;
+  border-color: #559fee;
+}
+.property-slider .owl-controls .owl-buttons .owl-next, .property-slider .owl-controls .owl-buttons .owl-prev{
+  background: #559fee;
+}
+#listing-carousel .owl-controls .owl-buttons .owl-next:hover{
+  background: #559fee;
+}
+.checkboxes input[type=checkbox]:checked+label:before{
+  color: #559fee;
+}
+.irs-from, .irs-to, .irs-single{
+  background: #559fee;
+}
+.irs-bar{
+  background-color: #559fee;
+}
+.show-options:hover{
+  color: #559fee;
+}
+.search-add input:focus{
+  border-color: #559fee;
+}
+.featured-bg .featured-item .icon i{
+  color: #559fee;
+}
+.featured-bg .featured-item h3 a:hover{
+  color: #559fee;
+}
+.label-inner .label-status{
+  background: #559fee;
+}
+.input-icon i{
+  color: #559fee;
+}
+.search-container .bg-search .btn-border:hover{
+  color: #559fee;
+}
+.footer-area #subscribe-form .form-group .btn-common{
+  color: #559fee;
+}
