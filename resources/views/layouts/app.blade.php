@@ -39,6 +39,10 @@
   <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/main.css') }}">
   <!-- Responsive Style -->
   <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/responsive.css') }}">
+  {{--google style links  --}}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
 
 </head>
 <body >
@@ -77,7 +81,7 @@
 
   <!-- Navbar Start -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white"  data-toggle="sticky-onscroll" style="border-radius: 
-  50px;">
+  0px 0px 30px 30px ;">
     <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
@@ -85,23 +89,23 @@
           <span class="navbar-toggler-icon"></span>
           <span class="lin-menu"></span>
         </button>
-        <a class="navbar-brand mx-auto p-1 bloder" href="{{ route('index')}}" style=" color:#559fee">
+        <a class="navbar-brand mx-auto p-1 bloder" href="{{ route('index')}}" style=" color:#1D5D9B">
           ANIS AUTO
-          {{-- <img src="assets/img/logo.png" alt=""> --}}
+          {{-- <img src="/img/logo.png" alt="" width="12%"> --}}
         </a>
       </div>
 
       <div class="collapse navbar-collapse" id="main-navbar">
         <ul class="navbar-nav mr-auto w-100 justify-content-center">
-          <li class="nav-item dropdown active">
-            <a class="nav-link dropdown-toggle" href="{{route('index')}}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <li class="nav-item  active">
+            <a class="nav-link " href="{{route('index')}}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Home <i class="fa fa-angle-down"></i>
             </a>
-            <div class="dropdown-menu">
+            {{-- <div class="dropdown-menu">
               <a class="dropdown-item" href="index.html">Home V1</a>
               <a class="dropdown-item" href="index-2.html">Home V2</a>
               <a class="dropdown-item" href="index-3.html">Home V3</a>
-            </div>
+            </div> --}}
           </li>
           <li class="nav-item ">
             <a class="nav-link" href="{{ route('cars')}}">
@@ -124,7 +128,7 @@
               <a class="dropdown-item" href="full-gallery.html">Full Width Gallery</a>
             </div>
           </li> --}}
-          <li class="nav-item dropdown">
+          {{-- <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Gallery <i class="fa fa-angle-down"></i>
             </a>
@@ -133,7 +137,7 @@
               <a class="dropdown-item" href="portfolio-3.html">3 Columns Gallery</a>
               <a class="dropdown-item" href="portfolio-4.html">4 Columns Gallery</a>
             </div>
-          </li>
+          </li> --}}
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Pages <i class="fa fa-angle-down"></i>
@@ -179,23 +183,7 @@
         <a href="{{route('index')}}">
         Home
         </a>
-        <ul class="dropdown">
-          <li>
-            <a href="index.html">
-              Home V1
-            </a>
-          </li>  
-          <li>
-            <a href="index-2.html">
-              Home V2
-            </a>
-          </li>   
-          <li>
-            <a href="index-3.html">
-              Home V3
-            </a>
-          </li> 
-        </ul>
+       
       </li>
       <li>
         <a class="active" href="{{route('cars')}}">
@@ -217,7 +205,7 @@
         </ul>
       </li>
       <li> --}}
-        <a href="#">
+        {{-- <a href="#">
           Gallery
         </a>
         <ul class="dropdown">
@@ -225,7 +213,7 @@
           <li><a href="portfolio-3.html">3 Columns Gallery</a></li>
           <li><a href="portfolio-4.html">4 Columns Gallery</a></li>
         </ul>
-      </li>
+      </li> --}}
       <li>
         <a href="#">Pages</a>
         <ul class="dropdown">
@@ -338,11 +326,7 @@
       </div>
     </section> 
 
-    <!-- Go to Top Link -->
-    <a href="#" class="back-to-top">
-      <i class="lni-chevron-up"></i>
-    </a>
-      
+
 
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -385,6 +369,34 @@
    })
 
     </script>
+
+
+
+<style>
+  .card{
+    opacity: 0%;
+  }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
+  <script>
+     document.addEventListener("DOMContentLoaded", function () {
+        const cards = document.querySelectorAll(".card");
+  
+        cards.forEach(function (card) {
+           new Waypoint({
+              element: card,
+              handler: function () {
+                 card.classList.add("animate__fadeIn"); // Add Animate.css class
+              },
+              offset: "50%", // Adjust the offset as needed
+           });
+        });
+     });
+  </script>
     
+    <a href="" class="back-to-top" style="display: none;">
+      <i class="lni-chevron-up"></i>
+    </a>
+          
 </body>
 </html>

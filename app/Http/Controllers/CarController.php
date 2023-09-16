@@ -88,4 +88,11 @@ class CarController extends Controller
     {
         //
     }
+
+
+    public function validate_rent(Request $request)
+    {
+        return view('cars.validate');
+    }
 }
+

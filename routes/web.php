@@ -33,9 +33,30 @@ Route::get('/contact_us', function () {
     return view('contactus');
 })->name('contactus');
 
-Route::get('/cars_list', function () {
-    return view('cars_list');
-})->name('cars');
+
+  // cars group
+  Route::prefix('/cars')->group(function () {
+    Route::get('/list', function () {
+        $cars = Car::all();
+        return view('cars_list',[
+            'cars' => $cars
+        ]);
+    })->name('cars');
+
+  
+
+    Route::get('/show/{id}' ,[
+        CarController::class , 'show'
+    ])->name('user.cars.show');
+
+
+    Route::post('/vlaidate_rent/{id}' ,[
+        CarController::class , 'validate_rent'
+    ])->name('user.cars.validate_rent');
+    
+ });
+
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -52,14 +73,10 @@ Route::get('/about_us' , function(){
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
-Route::get('/cars_all' ,[
-    CarController::class , 'index'
-]);
 
 
-Route::get('/cars_show/{id}' ,[
-    CarController::class , 'show'
-])->name('user.cars.show');
+
+
 
 Route::get('/admin' , function(){
     return  view('admin');
@@ -68,6 +85,10 @@ Route::get('/admin' , function(){
 Route::prefix('/admin')->group(function () {
     // cars group
     Route::prefix('/cars')->group(function () {
+
+        Route::get('/all' ,[
+            CarController::class , 'index'
+        ]);
 
        Route::get('create',[
         AdminCarController::class ,
