@@ -250,6 +250,10 @@
     <script src="assets/js/waypoints.min.js+wow.js+owl.carousel.min.js+jquery.slicknav.js+nivo-lightbox.js+jquery.slicknav.js+main.js+form-validator.min.js.pagespeed.jc.zQIGudS7Ob.js"></script><script>eval(mod_pagespeed_zgDaRAgh7F);</script>
    
     <script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/v8b253dfea2ab4077af8c6f58422dfbfd1689876627854" integrity="sha512-bjgnUKX4azu3dLTVtie9u6TKqgx29RBwfj3QXYt5EKfWM/9hPSAI/4qcV5NACjwAo8UtTeWefx6Zq5PHcMm7Tg==" data-cf-beacon="{&quot;rayId&quot;:&quot;7eea8f6999e00da5&quot;,&quot;version&quot;:&quot;2023.7.0&quot;,&quot;r&quot;:1,&quot;token&quot;:&quot;9a6015d415bb4773a0bff22543062d3b&quot;,&quot;si&quot;:100}" crossorigin="anonymous"></script>
-
+    <style>
+        .card{
+          opacity: 0%;
+        }
+        </style>
     
 @endsection

@@ -400,58 +400,65 @@ setInterval(changerContenu, 2000);
     <!-- Client Logo Section Start -->
     <section id="clients-logo" class="section-padding">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-2 col-md-4 col-xs-12">
-            <div class="client-logo">
-              <a href="#"><img class="img-fluid" src="assets/img/clients/img1.png" alt=""></a>
+        <div class="row" style="background: white; ">
+          <div class="col-12">
+            <div class="section-title-header text-center">
+              <h2 class="section-title pt-3">Nos Partenaires</h2>
             </div>
           </div>
-          <div class="col-lg-2 col-md-4 col-xs-12">
-            <div class="client-logo">
-              <a href="#"><img class="img-fluid" src="assets/img/clients/img2.png" alt=""></a>
+          <div class="col-lg-2 col-4 my-auto">
+            <div class="client-logo my-auto" style="heigth=60px; box-shadow:none;border:none:">
+              <a href="#"><img  class="img-fluid" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Mercedes-Benz_Star_2022.svg/800px-Mercedes-Benz_Star_2022.svg.png" alt=""></a>
             </div>
           </div>
-          <div class="col-lg-2 col-md-4 col-xs-12">
-            <div class="client-logo">
-              <a href="#"><img class="img-fluid" src="assets/img/clients/img3.png" alt=""></a>
+          <div class="col-lg-2 col-4 my-auto">
+            <div class="client-logo my-auto" style="heigth=60px; box-shadow:none;border:none:">
+              <a href="#"><img  class="img-fluid" src="https://www.freepnglogos.com/uploads/audi-logo-0.gif" alt=""></a>
             </div>
           </div>
-          <div class="col-lg-2 col-md-4 col-xs-12">
-            <div class="client-logo">
-              <a href="#"><img class="img-fluid" src="assets/img/clients/img4.png" alt=""></a>
+          <div class="col-lg-2 col-4 my-auto">
+            <div class="client-logo my-auto" style="heigth=60px; box-shadow:none;border:none:">
+              <a href="#"><img  class="img-fluid" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Dacia_Logo_new.jpg/250px-Dacia_Logo_new.jpg" alt=""></a>
             </div>
           </div>
-          <div class="col-lg-2 col-md-4 col-xs-12">
-            <div class="client-logo">
-              <a href="#"><img class="img-fluid" src="assets/img/clients/img5.png" alt=""></a>
+          <div class="col-lg-2 col-4 my-auto">
+            <div class="client-logo my-auto" style="heigth=60px; box-shadow:none;border:none:">
+              <a href="#"><img  class="img-fluid" src="https://upload.wikimedia.org/wikipedia/fr/thumb/e/e9/Volkswagen_2012-2019_Logo.svg/2048px-Volkswagen_2012-2019_Logo.svg.png" alt=""></a>
             </div>
           </div>
-          <div class="col-lg-2 col-md-4 col-xs-12">
-            <div class="client-logo">
-              <a href="#"><img class="img-fluid" src="assets/img/clients/img6.png" alt=""></a>
+          <div class="col-lg-2 col-4 my-auto">
+            <div class="client-logo my-auto" style="heigth=60px; box-shadow:none;border:none:">
+              <a href="#"><img  class="img-fluid" src="https://lemag.gueudet.fr/wp-content/uploads/gueudet/2023/07/Losange-logo-Renault-e1688320058225.jpg" alt=""></a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-4 my-auto">
+            <div class="client-logo my-auto" style="heigth=60px; box-shadow:none;border:none:">
+              <a href="#"><img   class="img-fluid" src="https://logos-world.net/wp-content/uploads/2021/03/Hyundai-Logo.png" alt=""></a>
+            </div>
+          </div>
+          <div class="row text-center my-2">
+            <div class="col-xs-12 col-sm-12 col-md-12 text-left">
+              <a href="#" class="show-options"> Plus</a>
             </div>
           </div>
         </div>
+        
       </div>
     </section>
     <!-- Cleint Logo Section End -->
 
 
-    <div class="container-fluid">
+    <div class="container shadow-lg " style="background-image: url('https://4.bp.blogspot.com/-FphQ4Ozqj6k/UIMDkY_gLhI/AAAAAAAADrs/1LvVrRnQEdk/s1600/Tileable+asphalt+road+surface+texture+smooth.jpg');background-size:cover;background-attachment: fixed;background-position: center center;border-radius: 0px 0px 30px 30px;">
         <div class="row">
-          <div class="col-lg-6 p-3" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_x7WTmfhp4GKPBmL62XSD8c8DcTtTQ8yDBTcBHe47MNNHoyA-CjPOuPDazZaKodVTROc&usqp=CAU');background-size:cover;background-attachment: fixed;background-position: center">
+          <div class="col-6" >
             <br><br><br>
-            <img src="{{ asset('./img/car_brown.png')}}" class="mx-auto my-auto">
+            <img src="{{ asset('./img/car_brown.png')}}" class="m-lg-5 my-auto img-fluid">
+            <br><br><br>
           </div>
-          <div class="col-lg-6">
-            <div class="card">
-              <div class="card-body">
-                <blockquote class="blockquote">
-                  <p>Quote</p>
-                  <footer class="card-blockquote">Footer<cite title="Source title">Source title</cite></footer>
-                </blockquote>
-              </div>
-            </div>
+          <div class="col-6 my-auto">
+            <h1 class="display-1 mx-auto" style="color:#ffffff;">
+              Votre Liberté <br> sur Quatre <br> Roues 
+            </h1>
           </div>
 
         </div>
@@ -683,7 +690,7 @@ setInterval(changerContenu, 2000);
   
 
   <!--  Preloader -->
-    {{-- <div id="preloader">
+    <div id="preloader">
       <div class="loader text-center" id="loader-1">
       </div><br>
   
@@ -702,7 +709,7 @@ setInterval(changerContenu, 2000);
           animation: slide 4s infinite;
         }
       </style>
-    </div> --}}
+    </div>
     <!-- End Preloader -->
 
     
@@ -824,6 +831,13 @@ setInterval(changerContenu, 2000);
         padding: 7px;
       }
     </style>
+
+
+<style>
+  .card{
+    opacity: 0%;
+  }
+  </style>
 @endsection
 
 

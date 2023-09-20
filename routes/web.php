@@ -78,11 +78,12 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 
-Route::get('/admin' , function(){
-    return  view('admin');
-})->name('admin');
+
 
 Route::prefix('/admin')->group(function () {
+    Route::get('/' , function(){
+        return  view('admin');
+    })->name('admin');
     // cars group
     Route::prefix('/cars')->group(function () {
 
