@@ -15,8 +15,8 @@ class CreateReservationsTable extends Migration
             $table->integer('state');
             $table->dateTime('rental_start_date');
             $table->dateTime('rental_end_date');
-            $table->dateTime('rental_start_heure');
-            $table->dateTime('rental_end_heure');
+            $table->time('rental_start_heure');
+            $table->time('rental_end_heure');
             $table->float('total_cost');
             $table->string('payment_status')->nullable();
             $table->string('pyment_method')->nullable();

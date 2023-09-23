@@ -180,7 +180,7 @@
                Total a payer  <span class="fw-bold" id="total"></span>
             </li>
             <li class="mt-3">
-              <form method="POST" action="{{ route('user.cars.validate_rent' , $car->id) }}">
+              <form method="POST" action="{{ route('user.cars.validate_rent' , $car->id) }}" id="myForm">
                 @csrf
                 <button type="submit"  class="btn " style="background-color: #fae041;" >
                   passer au paiement 
@@ -199,11 +199,7 @@
    
    
 
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-    const zoom = mediumZoom('#zoom-image');
-});
-</script>
+
 
 {{-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> --}}
 <script src="https://cdn.jsdelivr.net/npm/popper.js"></script>
@@ -224,6 +220,8 @@
     let start_time = '';
     let end_time = '';
     let car_price = {{ $car->price}}
+
+
     function getDateAndTimeStart(currentDate){
       const year = currentDate.getFullYear();
             const month = currentDate.getMonth() + 1; // Months are 0-indexed, so add 1
@@ -236,6 +234,8 @@
             const formattedTime = `${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}:${second.toString().padStart(2, '0')}`;
             start_date = formattedDate;
             start_time = formattedTime;
+            appendInput('rental_start_date',start_date)
+            appendInput('rental_start_heure',start_time)
     }
     
     function getDateAndTimeEnd(currentDate){
@@ -250,6 +250,9 @@
             const formattedTime = `${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}:${second.toString().padStart(2, '0')}`;
             start_date = formattedDate;
             end_time = formattedTime;
+            
+            appendInput('rental_end_date',start_date)
+            appendInput('rental_end_heure',end_time)
     }
 
     function reserver(){
@@ -296,6 +299,7 @@
           const endDate = selectedDates[1];
           getDateAndTimeStart(startDate);
           getDateAndTimeEnd(endDate);
+       
           // Calculate the time difference in milliseconds
           const timeDifference = endDate - startDate;
           // Convert milliseconds to days
@@ -303,6 +307,7 @@
           let Total = car_price * daysDifference; 
           console.log(Total);
           document.getElementById('total').innerHTML  = Total + " DH";
+          appendInput('total_cost',Total)
           document.getElementById('number_of_days').innerHTML  = daysDifference;
           document.getElementById('rent_info').style.display = "block";
           total_price = daysDifference * {{ $car->price}}
@@ -328,6 +333,25 @@
       }
     };
 
+
+
+//************************************************************
+    function appendInput(newInputName,valuee) {
+    // Create a new input element
+    const inputElement = document.createElement('input');
+
+    // Set input attributes
+    inputElement.type = 'hidden';
+    inputElement.name = newInputName; // Set the name attribute
+    inputElement.value = valuee // Optional: Set a placeholder
+
+    // Get the form by its ID
+    const form = document.getElementById('myForm');
+
+    // Append the input element to the form
+    form.appendChild(inputElement);
+}
+//************************************************************
 
   </script>
 

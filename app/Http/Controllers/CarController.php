@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Car;
+use App\Models\Reservation;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class CarController extends Controller
 {
@@ -90,9 +92,57 @@ class CarController extends Controller
     }
 
 
-    public function validate_rent(Request $request)
+    public function validate_rent(Request $request ,$car_id)
     {
-        return view('cars.validate');
+       
+
+        return view('cars.validate',[
+            'car_id' => $car_id,
+            "rental_start_date" => $request->rental_start_date,
+            "rental_start_heure" => $request->rental_start_heure,
+            "rental_end_date" => $request->rental_end_date,
+            "rental_end_heure" => $request->rental_end_heure,
+            "total_cost"  => $request->total_cost
+        ]);
+    }
+
+
+
+    public function confirm(Request $request){
+       
+        try{
+            DB::beginTransaction();
+            $resevation = new Reservation();
+            $resevation->user_id = $request->user_id;
+            $resevation->car_id = $request->car_id;
+            // 'state' => $request->state,
+            $resevation->state = 0;
+            $resevation->rental_start_date = $request->rental_start_date;
+            $resevation->rental_end_date = $request->rental_end_date;
+            $resevation->rental_start_heure = $request->rental_start_heure;
+            $resevation->rental_end_heure = $request->rental_end_heure;
+            $resevation->total_cost = $request->total_cost;
+            $resevation->payment_status = 0;
+            // 'payment_method' => $request->payment_method,
+            $resevation->pyment_method = 'cod';
+            $resevation->save();
+            DB::commit();
+
+            $reservation_id = $resevation->id;
+
+            return view('cars.fenished_with_succes' , [
+                'reservation_id' => $reservation_id
+            ]);
+            // 'kilometrage_start' => $request->kilometrage_start,
+        }      
+        catch(\Exception $e){
+            DB::rollBack();
+            return back()->withErrors(['error' => $e]);
+        }
+      
+
+        
+
     }
 }
 

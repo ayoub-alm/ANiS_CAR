@@ -845,11 +845,13 @@ a.back-to-top:hover, a.back-to-top:focus {
 }
 
 .slicknav_btn {
-  border-color: #1D5D9B;
+  border-color: #9b1d1d;
+  border-radius: 10px;
 }
 
 .slicknav_menu .slicknav_icon-bar {
   background: #1D5D9B;
+  border-radius: 20px;
 }
 
 /* only small tablets */
@@ -885,6 +887,7 @@ a.back-to-top:hover, a.back-to-top:focus {
   }
   .slicknav_menu {
     display: block;
+    border-radius: 20px ;overflow: hidden;
   }
 }
 

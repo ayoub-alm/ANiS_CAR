@@ -9,6 +9,22 @@
   <link rel="icon" href="{{ asset('img/favicon.svg')}}" type="image/png">
 
 
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{{ asset('./assets/js/jquery-min.js')}}"></script>
+    <script src="{{ asset('./assets/js/popper.min.js')}}"></script>
+    <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.mixitup.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.counterup.min.js') }}"></script>
+    <script src="{{ asset('assets/js/ion.rangeSlider.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.parallax.js') }}"></script>
+    <script src="{{ asset('assets/js/waypoints.min.js') }}"></script>
+    <script src="{{ asset('assets/js/wow.js') }}"></script>
+    <script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.slicknav.js') }}"></script>
+    <script src="{{ asset('assets/js/nivo-lightbox.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.slicknav.js') }}"></script>
+    <script src="{{ asset('assets/js/main.js') }}"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
@@ -53,19 +69,19 @@
 <!-- Header Area wrapper Starts -->
 <header id="header-wrap">
   <!-- Start Top Bar -->
-  <div class="top-bar">
+  <div class="top-bar" style="background:#272727; ">
     <div class="container">
       <div class="row">
         <div class="col-lg-7 col-md-8 col-xs-12">
           <!-- Start Contact Info -->
           <ul class="links clearfix">
-            <li><i class="lni-phone-handset"></i>0660-677220</li>
+            <li><a href="tel:0660-677220"><i class="lni-phone-handset"></i>0660677220</a></li>
             <li><i class="lni-map-marker"></i> Aeroport Mohamed 5,</li>
             <li><a href="https://maps.app.goo.gl/VtYfebvf6DVzCCGDA"> <i class="lni-map-marker"></i> Layali 2, Berrchid</a></li>
           </ul>
           <!-- End Contact Info -->
         </div>
-        <div class="col-lg-5 col-md-4 col-xs-12">
+        <div class="col-lg-5 col-md-4 col-xs-12 ">
           <div class="roof-social float-right">
             <a class="facebook" href="#"><i class="lni-facebook-filled"></i></a>
             <a class="twitter" href="#"><i class="lni-twitter-filled"></i></a>
@@ -88,8 +104,8 @@
     <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation" >
+          <span class="navbar-toggler-icon"></span> 
           <span class="lin-menu"></span>
         </button>
         <a class="navbar-brand mx-auto p-2 bloder ml-2" href="{{ route('index')}}" style=" color:#1D5D9B;" >
@@ -97,18 +113,19 @@
           <img src="/img/logosvg.svg" alt=""  class=""  width="50px" >
         </a>
       </div>
-
+<style>
+ 
+  .nav-link:hover{
+      border: 2px solid #F4D160;
+      border-radius: 10px;
+  }
+</style>
       <div class="collapse navbar-collapse" id="main-navbar">
         <ul class="navbar-nav mr-auto w-100 justify-content-center">
-          <li class="nav-item  active">
-            <a class="nav-link " href="{{route('index')}}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Home <i class="fa fa-angle-down"></i>
+          <li class="nav-item  ">
+            <a class="nav-link" href="{{route('index')}}">
+             Home
             </a>
-            {{-- <div class="dropdown-menu">
-              <a class="dropdown-item" href="index.html">Home V1</a>
-              <a class="dropdown-item" href="index-2.html">Home V2</a>
-              <a class="dropdown-item" href="index-3.html">Home V3</a>
-            </div> --}}
           </li>
           <li class="nav-item ">
             <a class="nav-link" href="{{ route('cars')}}">
@@ -141,7 +158,7 @@
               <a class="dropdown-item" href="portfolio-4.html">4 Columns Gallery</a>
             </div>
           </li> --}}
-          <li class="nav-item dropdown">
+          {{-- <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Pages <i class="fa fa-angle-down"></i>
             </a>
@@ -157,7 +174,7 @@
               <a class="dropdown-item" href="testimonials.html">Testimonials</a>
               <a class="dropdown-item" href="typography.html">Typography</a>
             </div>
-          </li>
+          </li> --}}
           <li class="nav-item ">
             <a class="nav-link" href="{{ route('user.blog.index')}}">
               Nos Articles
@@ -217,7 +234,7 @@
           <li><a href="portfolio-4.html">4 Columns Gallery</a></li>
         </ul>
       </li> --}}
-      <li>
+      {{-- <li>
         <a href="#">Pages</a>
         <ul class="dropdown">
           <li><a href="about.html">About Us</a></li>
@@ -231,7 +248,7 @@
           <li><a href="testimonials.html">Testimonials</a></li>
           <li><a href="typography.html">Typography</a></li>
         </ul>
-      </li>
+      </li> --}}
       <li>
         <a class="active" href="{{route('user.blog.index')}}">
         Nos Articles
@@ -258,46 +275,40 @@
         <footer id="footer" class="footer-area section-padding" style=" position: static;
         left: 0;
         bottom: 0;
-        width: 100%;">
+        width: 100%;border-radius: 30px 30px 0px 0px;">
           <div class="container">
             <div class="container">
               <div class="row">
                 <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                  <h3 class="footer-titel">About <span>Us</span></h3>
+                  <h3 class="footer-titel">Categories <span></span></h3>
                   <ul class="footer-link">
-                    <li><a href="#">Company</a></li>
-                    <li><a href="#">Team</a></li>
-                    <li><a href="#">Career</a></li>
-                    <li><a href="#">Graphic Design</a></li>           
-                    <li><a href="#">Documentation</a></li>           
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">Sport</a></li>
+                    <li><a href="#">Lux</a></li>
+                    <li><a href="#">Famill</a></li>           
+                    {{-- <li><a href="#">Documentation</a></li>            --}}
                   </ul>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                  <h3 class="footer-titel">Usefull<span> Links</span></h3>
+                  <h3 class="footer-titel">Liens <span> utiles</span></h3>
                   <ul class="footer-link">
-                    <li><a href="#">Bayonne, New York</a></li>
-                    <li><a href="#">Greenville, Chicago</a></li>
-                    <li><a href="#">The Heights, New Jersey</a></li>
-                    <li><a href="#">Bayonne, Washington DC</a></li>
-                    <li><a href="#">Greenville, San Francisco</a></li>
+                    <li><a href="{{ route('contactus')}}">Contactez Nous</a></li>
+                    <li><a href="{{ route('about_us')}}">À propos de Nous</a></li>
+                    <li><a href="{{ route('user.blog.index')}}">Nos Articles</a></li>
+                    {{-- <li><a href="#">Bayonne, Washington DC</a></li>
+                    <li><a href="#">Greenville, San Francisco</a></li> --}}
                   </ul>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
                   <h3 class="footer-titel">Contact <span>Info</span></h3>
                   <ul class="address">
-                    <li>
-                      <a href="#"><i class="lni-map-marker"></i> York Blvd, Los Angeles, US<br> View, CA 94041USA</a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="lni-phone-handset"></i> (518) 2014-040 43</a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="lni-envelope"></i> hello@example.com</a>
-                    </li>
+                    <li><a href="tel:0660-677220"><i class="lni-phone-handset"></i>0660677220</a></li>
+                     <li><a href="https://maps.app.goo.gl/VtYfebvf6DVzCCGDA"><i class="lni-map-marker"></i> Aeroport Mohamed 5,</a></li>
+                     <li><a href="https://maps.app.goo.gl/VtYfebvf6DVzCCGDA"> <i class="lni-map-marker"></i> Layali 2, Berrchid</a></li>
                   </ul>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                  <h3 class="footer-titel">Subscribe <span>on Our News</span></h3>
+                  <h3 class="footer-titel">Abonnez-vous à  <span>Nos actualités</span></h3>
                   <form method="post" id="subscribe-form" name="subscribe-form" class="validate">
                     <div class="form-group is-empty">
                       <input type="email" value="" name="Email" class="form-control" id="EMAIL" placeholder="Email address" required="">
@@ -306,10 +317,10 @@
                     </div>
                   </form>
                   <div class="social-icon">
-                    <a class="facebook" href="#"><i class="lni-facebook-filled"></i></a>
-                    <a class="twitter" href="#"><i class="lni-twitter-filled"></i></a>
-                    <a class="instagram" href="#"><i class="lni-instagram-filled"></i></a>
-                    <a class="linkedin" href="#"><i class="lni-linkedin-filled"></i></a>
+                    <a class="facebook" href="#"><i style="line-height:2;" class="lni-facebook-filled"></i></a>
+                    <a class="twitter" href="#"><i style="line-height:2;" class="lni-twitter-filled"></i></a>
+                    <a class="instagram" href="#"><i style="line-height:2;" class="lni-instagram-filled"></i></a>
+                    <a class="linkedin" href="#"><i style="line-height:2;" class="lni-linkedin-filled"></i></a>
                   </div>
                 </div>
               </div>
@@ -323,30 +334,19 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <p> Created by Ayoub Lemrachchaq</p>
+            <p>
+              Created by
+              <a href="https://www.linkedin.com/in/ayoub-lemrachchaq-233239285/">
+                Ayoub Lemrachchaq
+              </a>
+            </p>
           </div>
         </div>
       </div>
     </section> 
 
 
-
-
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="{{ asset('./assets/js/jquery-min.js')}}"></script>
-    <script src="{{ asset('./assets/js/popper.min.js')}}"></script>
-    <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('assets/js/jquery.mixitup.js') }}"></script>
-    <script src="{{ asset('assets/js/jquery.counterup.min.js') }}"></script>
-    <script src="{{ asset('assets/js/ion.rangeSlider.js') }}"></script>
-    <script src="{{ asset('assets/js/jquery.parallax.js') }}"></script>
-    <script src="{{ asset('assets/js/waypoints.min.js') }}"></script>
-    <script src="{{ asset('assets/js/wow.js') }}"></script>
-    <script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>
-    <script src="{{ asset('assets/js/jquery.slicknav.js') }}"></script>
-    <script src="{{ asset('assets/js/nivo-lightbox.js') }}"></script>
-    <script src="{{ asset('assets/js/jquery.slicknav.js') }}"></script>
-    <script src="{{ asset('assets/js/main.js') }}"></script>
+    
 
 
 
@@ -373,6 +373,13 @@
 
     </script>
 
+{{-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> --}}
+<script src="https://cdn.jsdelivr.net/npm/popper.js"></script>
+{{-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> --}}
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/material_blue.css">
+
 
 
 
@@ -391,11 +398,23 @@
            });
         });
      });
-  </script>
-    
-    <a href="" class="back-to-top" style="display: none;">
-      <i class="lni-chevron-up"></i>
-    </a>
+  </script>  
+  <style>
+
+
+
+
+
+::-webkit-scrollbar-thumb {
+    background-color: #F4D160; /* Change the thumb color */
+    border-radius: 6px; /* Add rounded corners to the thumb */
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #1D5D9B;
+}
+    </style>
           
 </body>
 </html>

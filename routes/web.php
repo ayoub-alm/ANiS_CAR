@@ -6,6 +6,8 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CarCategoryController;
 use App\Http\Controllers\CarController;
 use App\Http\Controllers\admin\CarController as AdminCarController;
+use App\Http\Controllers\ReservationReportController;
+use App\Http\Controllers\admin\ReservationController as AdminReservationController ;
 use App\Models\Car;
 
 /*
@@ -53,6 +55,12 @@ Route::get('/contact_us', function () {
     Route::post('/vlaidate_rent/{id}' ,[
         CarController::class , 'validate_rent'
     ])->name('user.cars.validate_rent');
+    
+
+    Route::post('/confirm' ,[
+        CarController::class , 'confirm'
+    ])->name('user.cars.confirm');
+
     
  });
 
@@ -119,5 +127,24 @@ Route::prefix('/admin')->group(function () {
                     'Store'
                     ])->name('admin.cars.categorie.store');
     });
+
+
+
+    Route::prefix('/reservation')->group(function(){
+        Route::get('/create' , [
+            AdminReservationController::class ,
+            'create'
+            ])->name('admin.reservation.create');
+
+            Route::get('/' , [
+                AdminReservationController::class ,
+                'index'
+                ])->name('admin.reservation.index');
+
+            Route::post('/store' , [
+                AdminReservationController::class ,
+                'Store'
+                ])->name('admin.reservation.store');
+});
 
 });

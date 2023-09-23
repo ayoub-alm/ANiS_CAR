@@ -20,7 +20,7 @@
           <div class="col-lg-5 col-md-6">
             <div class="contact-right-area">
               <h2 class="title-">Get In Touch</h2>
-              <p>If you are interested in working with us, <br> please get in touch.</p>
+              <p>Si vous souhaitez travailler avec nous, <br> veuillez nous contacter.</p>
               <div class="contact-right">
                 <div class="single-contact">
                   <div class="contact-icon">
@@ -38,7 +38,7 @@
                   <div class="contact-icon">
                     <i class="lni-phone-handset"></i>
                   </div>
-                  <p><a href="#">+1-234-567-478</a></p>
+                  <p><a href="tel:+212 679-335996">+212 679-335996</a></p>
                 </div>
               </div>
               <div class="social-icon">
@@ -82,11 +82,12 @@
     <section id="google-map-area">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-12">
-            <div id="conatiner-map"></div>
-          </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13342.441397606752!2d-7.5856643!3d33.2766919!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda63dcaa2953921%3A0x94c8cc49218f7837!2sAnis%20Auto%20Location%20de%20voitures!5e0!3m2!1sen!2sma!4v1695430084706!5m2!1sen!2sma" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </section>
     <!-- Map Section End -->
+
+
+    
 @endsection
