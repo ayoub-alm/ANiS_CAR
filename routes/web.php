@@ -136,15 +136,34 @@ Route::prefix('/admin')->group(function () {
             'create'
             ])->name('admin.reservation.create');
 
-            Route::get('/' , [
-                AdminReservationController::class ,
-                'index'
-                ])->name('admin.reservation.index');
+        Route::get('/' , [
+            AdminReservationController::class ,
+            'index'
+            ])->name('admin.reservation.index');
 
-            Route::post('/store' , [
+        Route::post('/store' , [
+            AdminReservationController::class ,
+            'Store'
+            ])->name('admin.reservation.store');
+
+        Route::get('/show/{reservation_uuid}' , [
+            AdminReservationController::class ,
+            'show'
+            ])->name('admin.reservation.show');
+
+        Route::get('/confirm/{reservation_uuid}' , [
+            AdminReservationController::class ,
+            'confirm'
+            ])->name('admin.reservation.confirm');
+        
+            Route::post('/',[
                 AdminReservationController::class ,
-                'Store'
-                ])->name('admin.reservation.store');
+                'store'
+            ])->name('admin.reservation.store');
+
+            Route::get('/contract' , function(){
+                return view('admin.reservations.conract');
+            })->name('contract');
 });
 
 });

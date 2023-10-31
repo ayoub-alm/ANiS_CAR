@@ -17,14 +17,15 @@
 
   {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"> --}}
 
-  <section class="container" > 
+  <section class="container-fluid" style="background:url('https://www.ecorentacar.com/blog/wp-content/uploads/2019/09/Car-Image-800x445.jpg');background-repeat: no-repeat; background-size:cover;background-position: center;border-radius: 0px 0px 30px 30px ;overflow: hidden;position: relative;bottom: 60px;z-index: -2; opacity: 0.9;"> 
     <div class="row">
       <div class="h1 display-4 col-12 mx-auto my-auto " >
-        <h3 class="h6  text-center " style="color: #1D5D9B;">
+        <br>
+        <h3 class="h6 display-6 mt-5 text-center " style="color: #ffffff;">
           ANIS AUTO
-      </h3>
-        {{-- <img src="https://www.nicepng.com/png/detail/330-3304412_png-transparent-car-car-rental-logo-png.png" class="img-fluid " alt=""> --}}
-        <h2 class="display-6 text-center " style="color: #272727a7;">
+        </h3>
+        {{-- <img src="https://www.nicepng.com/png/detail/330-3304412_png-transparent-car-car-rental-logo-png.png" class="img-fluid" alt=""> --}}
+        <h2 class="display-6 text-center " style="color: #ffffff;">
           <span class="my-5 display-4"  id="contentSpan" style="color: #F4D160" ></span>
           <br>
           <span class="h1 text-center">
@@ -32,22 +33,23 @@
           </span>
         </h2>
         <h2 class="mt-4 text-center arrow" style="color: #F4D160;">
-            <a name="" id="" class="btn arrow-btn " href="{{route('cars')}}" role="button">
+            <a name="" id="" class="btn arrow-btn " href="{{route('cars')}}" role="button" style="color: #ffff;">
               Nos Voitures
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
              </svg>
             </a>
-           </h2>
+        </h2>
+        <br><br><br><br><br><br>
       </div>
-
-      <div class="col-12 text-center mt-5">
+<!-- 
+      <div class="col-12 text-center "  >
         <p style="border-radius: 30px;">
-          <img src="{{asset('img/header_cars.png')}}" class="img-fluid"  />
+          <img src="https://www.madeirarentcar.com/assets/homebanner/5cb748963fd74.png" class="img-fluid"  width="200%" />
         </p>
-      </div>
+      </div> -->
 
-      {{-- <div class="col-12 text-center" style="position:relative;buttom:100px;" >
+      {{-- <div class="col-12 text-center"  >
         <p style="border-radius: 30px;overflow: hidden;">
           <img src="{{asset('./img/header_car1.png')}}" class="w-100" />
         </p>
@@ -82,8 +84,8 @@ setInterval(changerContenu, 2000);
 
 
     <!-- Intro Section Start -->
-    <div class="search-container">
-      <div class="container">
+    <div class=" search-container" style="border-radius: 30px;overflow: hidden;" >
+      <div class="container"  >
         <div class="row">
           <div class="col-12">
             <div class="section-title-header text-center">
@@ -91,7 +93,7 @@ setInterval(changerContenu, 2000);
             </div>
           </div>
         </div>
-        <div class="content">
+        <div class="content" style="border-radius:20px;overflow: hidden;">
           <div class="row">
             <div class="col-lg-3 col-md-6 col-xs-12">
               <div class="search-category-container">
@@ -227,7 +229,7 @@ setInterval(changerContenu, 2000);
           </div>
             @endforeach --}}
             @foreach ($cars as $car)
-            <div class="card my-1 hover-effect col-lg-12 property-main  animate__animated"  >
+            <div class="card my-1 hover-effect col-lg-12 property-main  animate__animated "  style="border-radius: 30px;overflow: hidden;">
               <div class="row g-0">
                 <div class="col-md-5 p-2 m-auto">
                   <a href="{{route('user.cars.show' , $car->uuid) }}">
@@ -311,6 +313,7 @@ setInterval(changerContenu, 2000);
 
 
 
+  
 
     <!-- Services Section Start -->
     <section class="services section-padding">
@@ -365,51 +368,60 @@ setInterval(changerContenu, 2000);
     <!-- Services Section End -->
 
     
-<section id="intro" class="section-intro">
-      <div class="search-container">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <h4 class="intro-sub-heading">Voyagez en toute liberté avec notre flotte de véhicules de location de qualité</h4>
-              <h2 class="intro-title"> partez à l'aventure, et vivez chaque kilomètre avec confiance et confort</h2>
-              <a href="{{ route('admin.cars.store')}}" rel="nofollow" class="btn  btn-lg" style="background: #F4D160;">Nos voitures</a>
-            </div>
-          </div>
+    <div class="container-fluid search-container">
+      <div class="row">
+         <div class="col-2"></div>
+        <div class="col-4 my-auto mr-3 text-start">
+          <h1 class="display-2 mx-auto" style="color:#ffffff; margin-left :3rem;" >
+            Votre Liberté <br> sur Quatre <br> Roues 
+          </h1>
+        </div>
+        <div class="col-6" >
+          <br>
+          <img src="{{ asset('./img/car_brown.png')}}" class="m-lg-5 my-auto img-fluid">
+          <br>
         </div>
       </div>
-</section>
+      <div class="row">
+        <div class="col-md-10 mx-auto">
+          <h4 class="intro-sub-heading">Voyagez en toute liberté avec notre flotte de véhicules de location de qualité</h4>
+          <h2 class="intro-title"> partez à l'aventure, et vivez chaque kilomètre avec confiance et confort</h2>
+          <a href="{{ route('cars')}}" rel="nofollow" class="btn  btn-lg" style="background: #F4D160;">Nos voitures</a>
+        </div>
+      </div>
+  </div>
 
     <!-- Client Logo Section Start -->
     <section id="clients-logo" class="section-padding">
       <div class="container">
-        <div class="row" style="background: white; ">
+        <div class="row" style="">
           <div class="col-12">
             <div class="section-title-header text-center">
               <h2 class="section-title pt-3">Nos Partenaires</h2>
             </div>
           </div>
           <div class="col-lg-2 col-4 my-auto">
-            <div class="client-logo my-auto" style="heigth=60px; box-shadow:none;border:none:">
+            <div class="client-logo my-auto" style="heigth=60px; box-shadow:none;border:none;">
               <a href="#"><img  class="img-fluid" src="https://www.freepnglogos.com/uploads/audi-logo-0.gif" alt=""></a>
             </div>
           </div>
           <div class="col-lg-2 col-4 my-auto">
-            <div class="client-logo my-auto" style="heigth=60px; box-shadow:none;border:none:">
+            <div class="client-logo my-auto" style="heigth:60px; box-shadow:none;border:none;">
               <a href="#"><img  class="img-fluid" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Mercedes-Benz_Star_2022.svg/800px-Mercedes-Benz_Star_2022.svg.png" alt=""></a>
             </div>
           </div>
           <div class="col-lg-2 col-4 my-auto">
-            <div class="client-logo my-auto" style="heigth=60px; box-shadow:none;border:none:">
+            <div class="client-logo my-auto" style="heigth:60px; box-shadow:none;border:none;">
               <a href="#"><img  class="img-fluid" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Dacia_Logo_new.jpg/250px-Dacia_Logo_new.jpg" alt=""></a>
             </div>
           </div>
           <div class="col-lg-2 col-4 my-auto">
-            <div class="client-logo my-auto" style="heigth=60px; box-shadow:none;border:none:">
+            <div class="client-logo my-auto" style="heigth:60px; box-shadow:none;border:none;">
               <a href="#"><img  class="img-fluid" src="https://upload.wikimedia.org/wikipedia/fr/thumb/e/e9/Volkswagen_2012-2019_Logo.svg/2048px-Volkswagen_2012-2019_Logo.svg.png" alt=""></a>
             </div>
           </div>
           <div class="col-lg-2 col-4 my-auto">
-            <div class="client-logo my-auto" style="heigth=60px; box-shadow:none;border:none:">
+            <div class="client-logo my-auto" style="heigth:60px; box-shadow:none;border:none;">
               <a href="#"><img  class="img-fluid" src="https://lemag.gueudet.fr/wp-content/uploads/gueudet/2023/07/Losange-logo-Renault-e1688320058225.jpg" alt=""></a>
             </div>
           </div>
@@ -430,21 +442,8 @@ setInterval(changerContenu, 2000);
     <!-- Cleint Logo Section End -->
 
 
-    <div class="container shadow-lg " style="background-image: url('https://4.bp.blogspot.com/-FphQ4Ozqj6k/UIMDkY_gLhI/AAAAAAAADrs/1LvVrRnQEdk/s1600/Tileable+asphalt+road+surface+texture+smooth.jpg');background-size:cover;background-attachment: fixed;background-position: center center;border-radius: 0px 0px 30px 30px;">
-        <div class="row">
-          <div class="col-6" >
-            <br><br><br>
-            <img src="{{ asset('./img/car_brown.png')}}" class="m-lg-5 my-auto img-fluid">
-            <br><br><br>
-          </div>
-          <div class="col-6 my-auto">
-            <h1 class="display-1 mx-auto" style="color:#ffffff;">
-              Votre Liberté <br> sur Quatre <br> Roues 
-            </h1>
-          </div>
 
-        </div>
-    </div>
+
 
 
 
@@ -668,19 +667,33 @@ setInterval(changerContenu, 2000);
         </div>
       </div>
     </section> --}}
-     
-  
-    <!-- Map Section Start -->
-    <section id="google-map-area my-5">
-      <div class="container-fluid">
-        <div class="row">
-            <iframe class=" mx-auto my-5    " src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13342.441397606752!2d-7.5856643!3d33.2766919!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda63dcaa2953921%3A0x94c8cc49218f7837!2sAnis%20Auto%20Location%20de%20voitures!5e0!3m2!1sen!2sma!4v1695430084706!5m2!1sen!2sma" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>        
-        </div>
+
+    <div class="container-fluid py  -lg-5 section-padding services" id="install-button" style="display: block;">
+      <div class="row ">
+          <div class="col-md-12 mx-auto">
+            <div class=" my-auto  mx-auto">
+                <img src="https://autohive-wp.themetags.com/wp-content/plugins/autohive-core/elementor//assets/images/slider/hero-car-3.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="900" height="700" loading="lazy">
+                <h3 class="h3 mt-lg-5 text-center " >Notre <span class="h1 fw-300;" style="color:#F4D160;">Application</span> PWA vous offre une expérience de location de voiture sans pareil. Téléchargez-la dès maintenant et partez à l'aventure !</p>
+                <br>
+                <button  class="btn btn-warning mx-auto" >Install App</button>
+            </div>
+            </div>
       </div>
+  </div>
+     
+<div class="container mt-3">
+      <!-- Map Section Start -->
+    <section id="google-map-area" style="border-radius: 30px ; overflow: hidden;">
+        <div class="row" style="border-radius: 30px ; overflow: hidden;">
+          <div class="section-title-header text-center col-12">
+            <h2 class="section-title">Localisation</h2>
+          </div style="border-radius: 30px ; overflow: hidden;">
+            <iframe  class=" mx-auto col-12" style="border-radius: 30px ; overflow: hidden;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13342.441397606752!2d-7.5856643!3d33.2766919!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda63dcaa2953921%3A0x94c8cc49218f7837!2sAnis%20Auto%20Location%20de%20voitures!5e0!3m2!1sen!2sma!4v1695430084706!5m2!1sen!2sma" width="800" height="600"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>        
+        </div>
     </section>
-    <!-- Map Section End -->
+</div>
 
-
+{{-- 
     <!-- Team Section Start -->
 <section id="team" class="section-padding text-center">
       <div class="container">
@@ -788,7 +801,54 @@ setInterval(changerContenu, 2000);
         </div>
       </div>
     </section>
-    <!-- Team Section End --> 
+    <!-- Team Section End -->  --}}
+
+
+
+
+
+  {{-- <section class="container">
+  <div class="row flex-lg-row-reverse align-items-center " style="color:#ffff;">
+        
+      <div class="col-12 col-lg-6">
+        <img src="https://autohive-wp.themetags.com/wp-content/plugins/autohive-core/elementor//assets/images/slider/hero-car-3.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="900" height="700" loading="lazy">
+      </div>
+      <div class="col-lg-5 text-center">
+        <h3 class="h3 text-center fw-bold  lh-1 mb-3" style="color:white;;">partez à l'aventure, et vivez chaque kilomètre avec confiance et confort</h3>
+        <div class=" text-center">
+            <a name="" id="" class="btn arrow-btn text-center " href="{{route('cars')}}" role="button" style="color: #ffff;">
+              Nos Voitures
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+               <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+             </svg>
+            </a>
+        </div>
+      </div>
+    </div>
+  </section> --}}
+
+
+  <section class='container-fluid' >
+    <div class="row" style="background:url('{{ asset('img/footer.png')}}');height:400px;background-size:cover;background-position:center center; position: relative;top:2px;z-index:-1; ">
+      <p class="col-12">
+        <h1 class="display-6 text-center" style="color:#ffffff;">
+            Louez Rapidement Votre Voiture au Maroc
+            <br> 
+            Voitures Propres et Bien Entretenues
+             <h3 class="h3 text-center fw-bold  lh-1 mb-3" style="color:white;;">partez à l'aventure, et vivez chaque kilomètre avec confiance et confort</h3>
+        <div class=" text-center">
+            <a name="" id="" class="btn arrow-btn text-center " href="{{route('cars')}}" role="button" style="color: #ffff;">
+              Nos Voitures
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+               <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+             </svg>
+            </a>
+        </h1>
+        {{-- <img src="{{ asset('img/footer.png')}}" alt="" class="img-fluid"> --}}
+      </p>
+    </div>
+  </section>
+
 
 
     <style>
@@ -827,6 +887,8 @@ setInterval(changerContenu, 2000);
 <a href="" class="back-to-top" style="display: none;">
   <i class="lni-chevron-up"></i>
 </a>
+<a href="
+"></a>
 
 
 <!--  Preloader -->
@@ -851,22 +913,6 @@ setInterval(changerContenu, 2000);
   </style>
 </div>
 <!-- End Preloader -->
-
-
-
-{{--   
-<script type="text/javascript" data-pagespeed-no-defer="">pagespeed.lazyLoadImages.overrideAttributeFunctions();</script><script src="assets/js/jquery-min.js.pagespeed.jm.BnirE05kB4.js"></script>
-<script src="assets/js/popper.min.js+bootstrap.min.js+color-switcher.js.pagespeed.jc.6nCLgIEODy.js"></script><script>eval(mod_pagespeed_P8INEXrOJS);</script>
-<script src="assets/js/jquery.mixitup.js+jquery.counterup.min.js.pagespeed.jc.HXncZBtzLW.js"></script><script>eval(mod_pagespeed_Rlj_tHG3Nf);</script>
-<script>eval(mod_pagespeed_sa9ih0QZBv);</script>
-<script src="assets/js/ion.rangeSlider.js.pagespeed.jm.aMXmv-d1af.js"></script>
-<script src="assets/js/jquery.parallax.js"></script>
-<script src="assets/js/waypoints.min.js+wow.js+owl.carousel.min.js+jquery.slicknav.js+nivo-lightbox.js+jquery.slicknav.js+main.js+form-validator.min.js.pagespeed.jc.zQIGudS7Ob.js"></script><script>eval(mod_pagespeed_zgDaRAgh7F);</script>
-
-<script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/v8b253dfea2ab4077af8c6f58422dfbfd1689876627854" integrity="sha512-bjgnUKX4azu3dLTVtie9u6TKqgx29RBwfj3QXYt5EKfWM/9hPSAI/4qcV5NACjwAo8UtTeWefx6Zq5PHcMm7Tg==" data-cf-beacon="{&quot;rayId&quot;:&quot;7eea8f6999e00da5&quot;,&quot;version&quot;:&quot;2023.7.0&quot;,&quot;r&quot;:1,&quot;token&quot;:&quot;9a6015d415bb4773a0bff22543062d3b&quot;,&quot;si&quot;:100}" crossorigin="anonymous"></script> --}}
-
-
-
 <style>
   /* Color Theme Swatches in Hex */
 .Illustration-1-hex { color: #F4D160; }

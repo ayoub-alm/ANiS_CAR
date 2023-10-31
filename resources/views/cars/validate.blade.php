@@ -3,9 +3,9 @@
 @section('content')
 
 <div class="container">
-    <div class="row">
+    <div class="row " style="color: #ffffff;">
         <div class="col text-center" >
-            <a href="{{ route('login')}}"><h3 > Avez vous déjà un compte?</h3></a>
+            <a href="{{ route('login')}}"><h3 class="mt-4" style="color: #ffffff" > Avez vous déjà un compte?</h3></a>
         </div>
         <br><hr>
         
@@ -16,21 +16,21 @@
            <hr>
         </div>
 
-        <form action="{{route('user.cars.confirm')}}"  method="POST">
+        <form action="{{route('user.cars.confirm')}}"  method="POST" enctype="multipart/form-data">
             @csrf
 
-        <div class="row py-4 px-1" style="background-color: #f4d16053;border-radius: 20px;">
+        <div class="row py-4 px-1" >
             {{-- last_name --}}
             <div class="form-group col-lg-8 mx-auto">
                 <label for="last_name">Prenom</label>
-                <input id="last_name" class="form-control" type="text" name="user_last_name">
+                <input id="last_name" class="form-control" type="text" name="driver1_last_name">
                 <br>
             </div>
 
             {{-- name --}}
             <div class="form-group col-lg-8 mx-auto">
                 <label for="name">Nom</label>
-                <input id="name" class="form-control" type="text" name="user_name">
+                <input id="name" class="form-control" type="text" name="driver1_name">
                 <br>
             </div>
 
@@ -68,14 +68,14 @@
              {{-- permis de conduire --}}
              <div class="form-group col-lg-8 mx-auto">
                 <label for="permis">Permis de coduire</label>
-                <input id="permis" class="form-control" type="file" name="permis">
+                <input id="permis" class="form-control" type="file" name="driver1_license">
                 <br>
             </div>
 
               {{-- Passport  --}}
               <div class="form-group col-lg-8 mx-auto">
                 <label for="Passport ">Cin</label>
-                <input id="cin " class="form-control" type="file" name="cin">
+                <input id="cin " class="form-control" type="file" name="driver1_cin">
                 <br>
             </div>
 
@@ -91,14 +91,14 @@
             {{--  name --}}
             <div class="form-group col-lg-8 mx-auto">
                 <label for="last_name">Prenom</label>
-                <input id="last_name" class="form-control" type="text" name="user_last_name_secend">
+                <input id="last_name" class="form-control" type="text" name="driver2_last_name">
                 <br>
             </div>
 
             {{-- name --}}
             <div class="form-group col-lg-8 mx-auto">
                 <label for="name">Nom</label>
-                <input id="name" class="form-control" type="text" name="user_name_secend">
+                <input id="name" class="form-control" type="text" name="driver2_name">
                 <br>
             </div>
             
@@ -106,14 +106,14 @@
 
         <div class="form-group col-lg-8 mx-auto secend_driver"  >
             <label for="permis">Permis de coduire <sup class="text-mute ml-1">deuxiem condicteur</sup></label>
-            <input id="permis" class="form-control" type="file" name="permis_secend_driver">
+            <input id="permis" class="form-control" type="file" name="driver2_license">
             <br>
         </div>
 
           {{-- Passport  --}}
           <div class="form-group col-lg-8 mx-auto secend_driver"  >
             <label for="Passport ">Cin <sub class="text-mute ml-1">deuxiem condicteur</sub></label>
-            <input id="cin " class="form-control" type="file" name="cin_secend_driver">
+            <input id="cin " class="form-control" type="file" name="driver2_cin">
             <br>
         </div>
  
@@ -147,7 +147,11 @@
               <input type="hidden" name="rental_start_heure" id="" value="{{$rental_start_heure}}">
               <input type="hidden" name="rental_end_heure" id="" value="{{$rental_end_heure}}">
               <input type="hidden" name="user_id" id="" value="1">
-              <input type="hidden" name="car_id" id="" value="{{ $car_id}}">
+              <input type="hidden" name="start_location" id="" value="{{ $start_location}}">
+              <input type="hidden" name="end_location" id="" value="{{ $end_location}}">
+              <input type="hidden" name="start_location" id="" value="{{ $start_location}}">
+              <input type="hidden" name="end_location" id="" value="{{ $end_location}}">
+              <input type="hidden" name="car_id" id="" value="{{ $car_id    }}">
         </div>
 
         </form>
@@ -174,5 +178,12 @@ document.addEventListener('DOMContentLoaded', function () {
 });
     
 </script>
+
+
+<style>
+    label{
+        color: #ffffff;
+    }
+</style>
 
 @endsection

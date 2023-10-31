@@ -11,6 +11,7 @@ class AddDriversToCarDriverInfos extends Migration
         Schema::create('car_driver_infos', function (Blueprint $table) {
             // Driver 1 info
             $table->string('driver1_name');
+            $table->string('driver1_last_name');
             $table->string('driver1_cin');
             $table->string('driver1_license');
             $table->softDeletes();
@@ -18,8 +19,10 @@ class AddDriversToCarDriverInfos extends Migration
             $table->unsignedBigInteger('car_id');
             // Driver 2 info
             $table->string('driver2_name')->nullable();
+            $table->string('driver2_last_name')->nullable();
             $table->string('driver2_cin')->nullable();
             $table->string('driver2_license')->nullable();
+            $table->string('travel_tickt');
             // Define foreign key constraints
             $table->foreign('reservation_id')->references('id')->on('reservations')->onDelete('cascade');
             $table->foreign('car_id')->references('id')->on('cars')->onDelete('cascade');

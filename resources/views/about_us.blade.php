@@ -3,8 +3,8 @@
 @section('content')
 
   <!-- Featured Section Start -->
-  <section class="featured-bg p-5">
-    <div class="container">
+  <section class="featured-bg pt-5">
+    <div class="container-fluid">
       <div class="row">
         <div class="col-12">
           <div class="section-title-header text-center">
@@ -25,23 +25,24 @@
             <p class="lead  intro-sub">Votre partenaire de confiance pour tous vos besoins de mobilité.</p>
         
             <div id="flotte" class="mt-3">
-                <h2><i class="lni-medall"></i>Notre Flotte de Voitures</h2>
+                <h2 style="color: #1D5D9B"><i class="lni-medall"></i>Notre Flotte de Voitures</h2>
                 <p>Nous proposons une vaste flotte de véhicules, allant des voitures compactes et économiques aux SUV spacieux, pour répondre à tous vos besoins de déplacement. Toutes nos voitures sont bien entretenues et régulièrement vérifiées pour garantir votre sécurité et votre confort pendant votre voyage.</p>
             </div>
         
             <div id="tarifs" class="mt-3">
-                <h2> <i class="lni-medall"></i> Des Tarifs Compétitifs</h2>
+                <h2 style="color: #1D5D9B"> <i class="lni-medall"></i> Des Tarifs Compétitifs</h2>
                 <p>Chez notre agence, nous croyons en la transparence et en l'honnêteté. Nos tarifs de location de voitures sont compétitifs et sans frais cachés. Vous saurez exactement ce que vous payez dès le début de votre réservation.</p>
             </div>
+
+              <div id="contact" class="mt-3">
+                <h2  style="color: #1D5D9B">  <i class="lni-medall"></i> Contactez-nous</h2>
+                <p>N'hésitez pas à nous contacter pour toute demande de renseignements ou pour réserver votre voiture dès aujourd'hui. Chez notre agence de location de voiture à Berrechid, votre satisfaction est notre priorité numéro un.</p>
+            </div>
+           
          </div>
         </div>
 
-        <div class="col-lg- 10 mt-5 mx-auto">
-          <div id="contact" class="mt-3">
-            <h2>  <i class="lni-medall"></i> Contactez-nous</h2>
-            <p>N'hésitez pas à nous contacter pour toute demande de renseignements ou pour réserver votre voiture dès aujourd'hui. Chez notre agence de location de voiture à Berrechid, votre satisfaction est notre priorité numéro un.</p>
-        </div>
-        </div>
+       
 
        {{-- <div class="col-md-12 col-lg-6 col-xs-12">
           <h2 class="intro-title">Who We Are</h2>
@@ -135,14 +136,33 @@
 
 
 
-<!-- Map Section Start -->
-<section id="google-map-area my-5">
-  <div class="container-fluid">
-    <div class="row">
-        <iframe class="col-12" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13342.441397606752!2d-7.5856643!3d33.2766919!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda63dcaa2953921%3A0x94c8cc49218f7837!2sAnis%20Auto%20Location%20de%20voitures!5e0!3m2!1sen!2sma!4v1695430084706!5m2!1sen!2sma" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>        
-    </div>
+    <div class="container mt-5" id="install-button" style="display: block;">
+      <div class="row ">
+          <div class="col-md-12 mx-auto">
+                <div class="row ">
+                  <div class="col-lg-6 my-auto  mx-auto">
+                    <h3 class="h3 mt-lg-5 text-center " style="color: #ffffff;">Notre <span class="h1 fw-300;" style="color:#F4D160;">Application</span> PWA vous offre une expérience de location de voiture sans pareil. Téléchargez-la dès maintenant et partez à l'aventure !</p>
+                      <br>
+                      <button  class="btn btn-warning mx-auto" >Install App</button>
+                  </div>
+                  <div class="col-lg-6 mx-auto text-center">
+                    <br>
+                    <img src="{{ asset('img/application.jpg')}}" alt="" srcset="" width="70%" class="img-fluid  " style="border: #ffffff 2px solid;border-radius: 30px;">
+                   </div>
+                </div>
+            </div>
+      </div>
   </div>
-</section>
-<!-- Map Section End -->
- 
+     
+<div class="container mt-5">
+      <!-- Map Section Start -->
+    <section id="google-map-area">
+        <div class="row" style="border-radius: 30px ; overflow: hidden;">
+          <div class="section-title-header text-center col-12">
+            <h2 class="section-title">Localisation</h2>
+          </div style="border-radius: 30px ; overflow: hidden;">
+            <iframe  class=" mx-auto col-12" style="border-radius: 30px ; overflow: hidden;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13342.441397606752!2d-7.5856643!3d33.2766919!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda63dcaa2953921%3A0x94c8cc49218f7837!2sAnis%20Auto%20Location%20de%20voitures!5e0!3m2!1sen!2sma!4v1695430084706!5m2!1sen!2sma" width="800" height="600"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>        
+        </div>
+    </section>
+</div>
 @endsection

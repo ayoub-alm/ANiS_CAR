@@ -10,17 +10,15 @@ class CreateContractsTable extends Migration
     {
         Schema::create('contracts', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('car_id');
-            $table->dateTime('start_date');
-            $table->dateTime('end_date');
+            $table->bigInteger('reservation_id');
+            $table->bigInteger('car_id');
             $table->float('total_cost');
-            $table->string('status')->default('pending'); // or use an enum if supported by your database
+            $table->integer('status'); // or use an enum if supported by your database
             $table->timestamps();
             $table->softDeletes();
             // Define foreign key constraints
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('car_id')->references('id')->on('cars')->onDelete('cascade');
+            // $table->foreign('reservation_id')->references('id')->on('reservations')->onDelete('cascade');
+            // $table->foreign('car_id')->references('id')->on('cars')->onDelete('cascade');
         });
     }
 

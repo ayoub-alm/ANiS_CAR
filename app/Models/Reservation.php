@@ -9,6 +9,11 @@ class Reservation extends Model
 {
     use HasFactory;
 
+    public static $CREATED = 1 ;
+    public static $ACCPTED =  2 ;
+    public static $IN_RENTL = 3;
+    public static $CLOSED = 4 ;
+
     protected $fillable = [
         'user_id',
         'car_id',
@@ -30,6 +35,10 @@ class Reservation extends Model
 
     public function user(){
         return $this->belongsTo(User::class);
+    }
+
+    public function drivers(){
+        return $this->hasOne(CarDriverInfo::class);
     }
 
 }

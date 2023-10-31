@@ -46,14 +46,7 @@ class CarController extends Controller
      */
     public function store(Request $request)
     {
-        // if ($request->has('clim')) {
-        //     dd('has clim');
-        // }else{
-        //     dd('dont has clim');
-        // }
-
-        
-
+      
         try{
             DB::beginTransaction();
                 // dd($request->name);
@@ -76,7 +69,7 @@ class CarController extends Controller
                 // 'clim' => 'boolean',
                 'vitess_number' => 'integer',
                 'dors_numbers' => 'integer',
-                'description' => 'nullable|string',
+                // 'description' => 'nullable|string',
             ]);
         
             $path = public_path('car_imgs/');
@@ -91,7 +84,9 @@ class CarController extends Controller
                 'matricule' => $request['matricule'],
                 'state' => $request['state'],
                 'categorie_id' => $request['categories_id'],
-                'price' => $request['price'],
+                'price_per_day' => $request['price_per_day'],
+                'price_per_week' => $request['price_per_week'],
+                'price_per_mounth' => $request['price_per_mounth']
             ]);
 
           

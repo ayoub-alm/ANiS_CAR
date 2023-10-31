@@ -1,0 +1,16 @@
+{
+    "name": "ANIS AUTO",
+    "short_name": "ANIS_AUTO",
+    "description": "RENT CAR AGENCE DE LOCATION DE VOITURES ",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#007bff",
+    "icons": [
+        {
+            "src": "/img/favicon.svg",
+            "sizes": "192x192",
+            "type": "image/svg"
+        }
+    ]
+}

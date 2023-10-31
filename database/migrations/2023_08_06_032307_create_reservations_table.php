@@ -10,7 +10,7 @@ class CreateReservationsTable extends Migration
     {
         Schema::create('reservations', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');
+            $table->bigInteger('user_id')->nullable();
             $table->unsignedBigInteger('car_id');
             $table->integer('state');
             $table->dateTime('rental_start_date');
@@ -25,8 +25,7 @@ class CreateReservationsTable extends Migration
             $table->timestamps();
             $table->softDeletes();
             // Define foreign key constraints
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('car_id')->references('id')->on('cars')->onDelete('cascade');
+            // $table->foreign('car_id')->references('id')->on('cars')->onDelete('cascade');
         });
     }
 

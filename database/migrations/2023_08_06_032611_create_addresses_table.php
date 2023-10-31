@@ -10,15 +10,13 @@ class CreateAddressesTable extends Migration
     {
         Schema::create('addresses', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');
-            $table->string('street');
+            $table->string('address_line');
             $table->string('city');
             $table->string('state');
             $table->string('postal_code');
             $table->timestamps();
             $table->softDeletes();
             // Define foreign key constraint
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

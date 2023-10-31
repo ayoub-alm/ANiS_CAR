@@ -10,13 +10,13 @@ class CreateAccidentReportsTable extends Migration
     {
         Schema::create('accident_reports', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('reservation_id');
+            $table->unsignedInteger('reservation_id');
             $table->dateTime('accident_date');
             $table->text('accident_description');
             $table->timestamps();
             $table->softDeletes();
             // Define foreign key constraint
-            $table->foreign('reservation_id')->references('id')->on('reservations')->onDelete('cascade');
+            // $table->foreign('reservation_id')->references('id')->on('reservations');
         });
     }
 

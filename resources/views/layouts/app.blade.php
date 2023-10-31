@@ -8,7 +8,10 @@
 
   <link rel="icon" href="{{ asset('img/favicon.svg')}}" type="image/png">
 
-
+<!-- PWA  -->
+<meta name="theme-color" content="#272727"/>
+<link rel="apple-touch-icon" href="{{ asset('img/logosvg.svg') }}">
+<link rel="manifest" href="{{ asset('/manifest.json') }}">
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="{{ asset('./assets/js/jquery-min.js')}}"></script>
     <script src="{{ asset('./assets/js/popper.min.js')}}"></script>
@@ -64,7 +67,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
 
 </head>
-<body >
+<body style="background: url('https://4.bp.blogspot.com/-FphQ4Ozqj6k/UIMDkY_gLhI/AAAAAAAADrs/1LvVrRnQEdk/s1600/Tileable+asphalt+road+surface+texture+smooth.jpg');background-size:cover;background-attachment: fixed;background-position: center center;" >
 
 <!-- Header Area wrapper Starts -->
 <header id="header-wrap">
@@ -266,17 +269,19 @@
 </header>
 <!-- Header Area wrapper End -->
 
-        <main class="py-4">
+        <main class="" >
             @yield('content')
         </main>
     </div>
+    
 
         <!-- Footer Section Start -->
-        <footer id="footer" class="footer-area section-padding" style=" position: static;
+        <footer id="footer" class="footer-area section-padding" style=" position: relative;
         left: 0;
-        bottom: 0;
-        width: 100%;border-radius: 30px 30px 0px 0px;">
-          <div class="container">
+        width: 100%;
+        border-radius: 30px 30px 0px 0px;
+        ">
+        <div class="container">
             <div class="container">
               <div class="row">
                 <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
@@ -325,30 +330,24 @@
                 </div>
               </div>
             </div>  
-          </div>     
+          </div>   
+          {{-- copyright --}}
+          <section id="">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <p>
+                    Created by
+                    <a href="https://www.linkedin.com/in/ayoub-lemrachchaq-233239285/">
+                      Ayoub Lemrachchaq
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>   
         </footer> 
         <!-- Footer Section End -->
-
-        
-    <section id="copyright">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <p>
-              Created by
-              <a href="https://www.linkedin.com/in/ayoub-lemrachchaq-233239285/">
-                Ayoub Lemrachchaq
-              </a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </section> 
-
-
-    
-
-
 
     <script>
       $('.owl-carousel').owlCarousel({
@@ -399,12 +398,60 @@
         });
      });
   </script>  
+
+
+<script>
+  let deferredPrompt;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+    // Prevent the browser's default install prompt
+    e.preventDefault();
+
+    // Stash the event so it can be triggered later
+    deferredPrompt = e;
+
+    // Display a custom installation prompt (e.g., a button)
+    showInstallButton(true);
+});
+
+function showInstallButton(show) {
+    const installButton = document.getElementById('install-button');
+    if (show) {
+        installButton.style.display = 'block';
+        installButton.addEventListener('click', () => {
+            // Show the browser's install prompt
+            deferredPrompt.prompt();
+
+            // Wait for the user to respond to the prompt
+            deferredPrompt.userChoice.then((choiceResult) => {
+                if (choiceResult.outcome === 'accepted') {
+                    console.log('User accepted the install prompt');
+                } else {
+                    console.log('User dismissed the install prompt');
+                }
+
+                // Reset the deferredPrompt
+                deferredPrompt = null;
+
+                // Hide the install button
+                installButton.style.display = 'none';
+            });
+        });
+    } else {
+        installButton.style.display = 'none';
+    }
+}
+</script>
+<script src="{{ asset('/sw.js') }}"></script>
+<script>
+    if (!navigator.serviceWorker.controller) {
+        navigator.serviceWorker.register("/sw.js").then(function (reg) {
+            console.log("Service worker has been registered for scope: " + reg.scope);
+        });
+    }
+</script>
+
   <style>
-
-
-
-
-
 ::-webkit-scrollbar-thumb {
     background-color: #F4D160; /* Change the thumb color */
     border-radius: 6px; /* Add rounded corners to the thumb */

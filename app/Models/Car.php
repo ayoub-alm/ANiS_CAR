@@ -30,4 +30,15 @@ class Car extends Model
         return $this->hasOne( CarFullInfo::class );
     }
    
+    /**
+     * Get all of the comments for the Car
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function reservation()
+    {
+        return $this->hasMany(Reservation::class);
+    }
+   
+
 }

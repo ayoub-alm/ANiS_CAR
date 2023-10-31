@@ -28,13 +28,41 @@
             </div>
             {{-- price --}}
             <div class="form-group col-lg-6">
-                <label for="">Prix</label>
-                <input type="number" name="price" id="" class="form-control" placeholder=""  step="0.1">
+                <label for="">Prix -7J </label>
+                <input type="number" name="price_per_day" id="" class="form-control" placeholder=""  step="0.1">
+            </div>
+
+            <div class="form-group col-lg-6">
+                <label for="">Prix pour  un semaine et plus </label>
+                <input type="number" name="price_per_week" id="" class="form-control" placeholder=""  step="0.1">
+            </div>
+
+             <div class="form-group col-lg-6">
+                <label for="">Prix pour  1 mois et plus </label>
+                <input type="number" name="price_per_mounth" id="" class="form-control" placeholder=""  step="0.1">
             </div>
              {{-- Model --}}
             <div class="form-group col-lg-6">
                 <label for="">Model</label>
                 <input type="text" name="model" id="" class="form-control" placeholder="" >
+            </div>
+
+            {{-- Color --}}
+             <div class="form-group col-lg-6">
+                <label for="">Coleur</label>              
+                <select class=" select2 col-lg-6 form-control-lg" aria-label="" name="color" style="width: 100%;height: 1.5rem;">
+                    <option value="Black" selected >Noir</option>
+                    <option value="white">Blanche</option>
+                    <option value="yellow">Jaune</option>
+                    <option value="red">Rouge</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Vert</option>
+                    <option value="ornage">Orange</option>
+                    <option value="gray ">Gree</option>
+                    <option value="brown">Marron</option>
+                    <option value="pink">Rose</option>
+                    <option value="purple">Violet</option>
+                </select>
             </div>
 
              {{-- Year --}}

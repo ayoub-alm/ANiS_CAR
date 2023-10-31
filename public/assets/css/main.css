@@ -1110,7 +1110,7 @@ select.classic {
    Property Section
    ========================================================================== */
 .property {
-  background: #fafafa;
+  /* background: #fafafa; */
 }
 
 .property-main {

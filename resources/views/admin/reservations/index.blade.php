@@ -60,7 +60,7 @@
                     <tbody>
                         @foreach ( $reservations as $reservation)
                         <tr>
-                            <td> <a href="">{{$reservation->uuid }}</a></td>
+                            <td> <a href="{{ route('admin.reservation.show', $reservation->uuid)}}">{{$reservation->uuid }}</a></td>
                             <td>{{$reservation->car->name }}</td>
                             <td>{{$reservation->car->matricule }}</td>
                             @switch($reservation->state)
@@ -98,7 +98,9 @@
                             @default
                             <td><span class="text-danger font-weight-bold ">Non Payeé </span></td>
                         @endswitch
-                            <td>{{ $reservation->user->name." ".$reservation->user->last_name  }}</td>
+                            <td>
+                            {{  $reservation->drivers->driver1_last_name." ". $reservation->drivers->driver1_name }}
+                            </td>
                             <td>{{$reservation->created_at->format('Y-m-d') }}</td>
                         </tr>
                         @endforeach

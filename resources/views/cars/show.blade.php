@@ -18,7 +18,7 @@
      
 
 
-    <div class="container-fluid pt-1 border "  style="background: white;border-radius: 20px;"  >
+    <div class="container pt-2 border my-4   "  style="background: rgba(255, 255, 255, 0.9);border-radius: 20px;"  >
 
           <div class="row">
             <div class="col-lg-6 " style="position: sticky;">
@@ -123,9 +123,9 @@
     <div class="container">
       <div class="row">
       <div class="col-lg-6 " >
-        <div class="row property-main  m-2 border-secondary-subtle p-5" style="box-shadow: 1px 1px 4px lightgrey;border-radius:10px;" >
+        <div class="row property-main  m-2 border-secondary-subtle pt-4" style="box-shadow: 1px 1px 4px lightgrey;border-radius:10px;background: rgba(255, 255, 255, 0.9);" >
           <br>
-          <h2 class="h2"  >
+          <h2 class="h2 col-12"  >
             Infs de reservation
           </h2>
           <br>
@@ -159,8 +159,8 @@
         </div>
 
         
-        <div class="col-lg-6" >
-          <ul class="list-group property-main  m-2 border-secondary-subtle p-5" style="display: none;border:solid 2px #0d6efd; " id="rent_info">
+        <div class="col-lg-6 p-2 property-main border-secondary-subtle" style="display: none;box-shadow: 1px 1px 4px lightgrey;border-radius:10px;background: rgba(255, 255, 255, 0.9);" id="rent_info" >
+          <ul class="list-group   m-2 " >
             <li class="list-group-item d-flex justify-content-between align-items-center ">
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-center">
@@ -272,12 +272,11 @@
       const location = event.target.value;
       end_location = event.target.value;
     });
-   
     const disabledDateRanges = [
-      { from: "2023-08-20", to: "2023-08-25" },
-      { from: "2023-08-30", to: "2023-09-02" }
-    ];
-
+      @foreach($car->reservation() as $reservationx)
+          { from: {{ $reservationx->rental_start_date }}, to: {{ $reservationx->rental_end_date }} },
+        @endforeach()
+       ];
     // Initialize Flatpickr for the start and end date inputs
     const range = document.querySelector("#range-date");
   
@@ -313,6 +312,8 @@
           total_price = daysDifference * {{ $car->price}}
           document.getElementById('depart_lieux').innerHTML = start_location;
           document.getElementById('retour_lieux').innerHTML = end_location;
+           appendInput('start_location',start_location);
+           appendInput('end_location',end_location);
 
           // Scroll to the target element
           document.getElementById('rent_info').scrollIntoView();

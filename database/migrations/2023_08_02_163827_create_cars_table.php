@@ -22,8 +22,10 @@ class CreateCarsTable extends Migration
             $table->string('matricule');
             $table->integer('state');
             $table->unsignedBigInteger('categorie_id');
-            // $table->unsignedBigInteger('car_full_info_id');
-            $table->float('price');
+            $table->string('color');
+            $table->float('price_per_day');
+            $table->float('price_per_week');
+            $table->float('price_per_mounth');
             $table->timestamps();
             $table->softDeletes();
             $table->foreign('categorie_id')->references('id')->on('car_categories')->onDelete('cascade');
